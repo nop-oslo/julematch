@@ -19,8 +19,8 @@
 <h1>Julematch <span>2026.</span></h1><p class="lead">Velkommen til NOP Oslo Julematch! Finn matchpåmelding, deltakerinformasjon og informasjon til Range Officers på ett sted.</p>
 <div class="actions"><a class="btn" href="https://shootnscoreit.com/event/22/30215/" target="_blank" rel="noopener noreferrer">Se matchen på SSI ↗</a><a class="btn secondary" href="#ro">Jeg vil bidra som RO ↓</a></div>
 </div><section class="hero-countdown" id="nedtelling" aria-label="Nedtellinger"><div class="wrap"><div class="eyebrow">Vi teller ned</div><h2>Påmelding og matchstart</h2><div class="cards countdown-grid">
-<div class="card countdown-card" data-countdown="registration"><div class="small">Påmeldingen åpner</div><strong class="countdown-status">Nedtellingen starter snart</strong><p class="countdown-clock" aria-live="off"></p></div>
-<div class="card countdown-card" data-countdown="match"><div class="small">Matchstart</div><strong class="countdown-status">Nedtellingen starter snart</strong><p class="countdown-clock" aria-live="off"></p></div>
+<div class="card countdown-card" data-countdown="registration"><div class="small">Påmeldingen åpner 14. november kl. 18.00</div><strong class="countdown-status">Nedtellingen starter snart</strong><p class="countdown-clock" aria-live="off"></p></div>
+<div class="card countdown-card" data-countdown="match"><div class="small">Matchstart 5. desember kl. 09.00</div><strong class="countdown-status">Nedtellingen starter snart</strong><p class="countdown-clock" aria-live="off"></p></div>
 </div></div></section></div></header>
 <main>
 
@@ -38,7 +38,7 @@ function oppdaterNedtellinger(){
   if(remaining<=0){status.textContent=type==='registration'?'Påmeldingen er åpnet!':'Matchen har startet!';clock.textContent='';continue;}
   const days=Math.floor(remaining/86400000),hours=Math.floor(remaining/3600000)%24,mins=Math.floor(remaining/60000)%60,secs=Math.floor(remaining/1000)%60;
   status.textContent=days+' dager';
-  clock.textContent=[hours,mins,secs].map(v=>String(v).padStart(2,'0')).join(':')+' (timer : minutter : sekunder)';
+  clock.textContent=[hours,mins,secs].map(v=>String(v).padStart(2,'0')).join(':');
  }
 }
 oppdaterNedtellinger();setInterval(oppdaterNedtellinger,1000);
